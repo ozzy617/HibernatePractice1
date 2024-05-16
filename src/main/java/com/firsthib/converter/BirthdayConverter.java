@@ -1,8 +1,8 @@
 package com.firsthib.converter;
 
 import com.firsthib.entity.Birthday;
-import jakarta.persistence.AttributeConverter;
 
+import javax.persistence.AttributeConverter;
 import java.sql.Date;
 import java.util.Optional;
 

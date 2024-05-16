@@ -1,7 +1,8 @@
 package com.firsthib.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import java.util.HashSet;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Set;
 @Builder
 @Entity
 @Table(name = "company")
-public class Company {
+public class Company implements BaseEntity<Integer> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

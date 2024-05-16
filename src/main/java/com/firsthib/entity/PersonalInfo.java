@@ -1,7 +1,9 @@
 package com.firsthib.entity;
 
 import com.firsthib.converter.BirthdayConverter;
-import jakarta.persistence.*;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,5 +25,6 @@ public class PersonalInfo implements Serializable {
     private String lastname;
     @Convert(converter =BirthdayConverter.class)
     @Column(name  = "birth_date")
+    @NotNull
     private Birthday birthDate;
 }

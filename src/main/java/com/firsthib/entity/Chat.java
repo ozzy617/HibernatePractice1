@@ -1,6 +1,6 @@
 package com.firsthib.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +14,8 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Chat {
+public class Chat implements BaseEntity<Long>{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

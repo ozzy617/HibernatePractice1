@@ -1,10 +1,7 @@
 package com.firsthib.util;
 
 import com.firsthib.converter.BirthdayConverter;
-import com.firsthib.entity.Chat;
-import com.firsthib.entity.Company;
-import com.firsthib.entity.Profile;
-import com.firsthib.entity.User;
+import com.firsthib.entity.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy;
 import org.hibernate.cfg.Configuration;
@@ -19,6 +16,7 @@ public class HibernateUtil {
         configuration.addAnnotatedClass(Company.class);
         configuration.addAnnotatedClass(Profile.class);
         configuration.addAnnotatedClass(Chat.class);
+        configuration.addAnnotatedClass(Payment.class);
         configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy());
         return configuration.buildSessionFactory();
     }
